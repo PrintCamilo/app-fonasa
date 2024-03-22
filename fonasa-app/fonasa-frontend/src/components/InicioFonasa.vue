@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Bienvenido a FONASA</h1>
-    <p>Esta es la página de inicio de la aplicación FONASA.</p>
+    <h1>FONASA</h1>
+    <p>Aplicación para automatización de consultas.</p>
     <div class="d-flex flex-column">
       <router-link to="/atender-paciente">Atender Paciente</router-link><br>
       <router-link to="/consultas-mas-pacientes">Consultas con más Pacientes</router-link><br>
