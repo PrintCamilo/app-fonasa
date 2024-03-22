@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// esquema de la consulta
 const consultaSchema = new mongoose.Schema({
   id: {
     type: Number,
@@ -26,7 +27,8 @@ const consultaSchema = new mongoose.Schema({
   },
 });
 
-ConsultaSchema.statics.getPacientesMasAtendidos =
+// definir modelo para obtener pacientes más atendidos
+consultaSchema.statics.getPacientesMasAtendidos =
   async function () {
     try {
       const consultaMasPacientes = await this.aggregate([
@@ -57,6 +59,8 @@ ConsultaSchema.statics.getPacientesMasAtendidos =
       throw Error("Error al obtener pacientes más atendidos");
     }
   };
+
+
 
 const Consulta = mongoose.model("Consulta", consultaSchema);
 
